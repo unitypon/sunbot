@@ -20,7 +20,7 @@ async def on_ready():
 async def markov(ctx, id):
     url = "https://www.fimfiction.net/story/download/" + id + "/txt"
     markovgenerate = MarkovText()
-    print('Getting story with id ${0}...'.format(id))
+    print('Getting story with id {0}...'.format(id))
     markovgenerate.data(requests.get(url).content.decode(encoding="UTF-8"))
     print('Story received.')
     response = markovgenerate(max_length=5000)
@@ -30,7 +30,7 @@ async def markov(ctx, id):
 
 @bot.event
 async def on_member_join(member):
-    print('Member ${0} joined'.format(member))
+    print('Member {0} joined'.format(member))
     guild = member.guild
     if guild.system_channel is not None:
         to_send = '{0.mention}, I\'ll show you who\'s boss of this gym'.format(member)

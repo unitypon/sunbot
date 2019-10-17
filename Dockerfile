@@ -7,4 +7,4 @@ RUN pip install requests
 RUN pip install discord.py
 RUN pip install markovchain
 
-CMD [ "python", "./sunbot.py" ]
+CMD [ "python","-u","./sunbot.py" ]
